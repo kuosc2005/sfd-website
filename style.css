@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+nav {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: var(--bg-secondary);
+  height: var(--nav-height);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-1);
+}
+nav > div {
+  width: 100%;
+  max-width: var(--max-width);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--gap-1);
+}
+nav > div ul {
+  display: flex;
+  background: var(--bg-secondary);
+  align-items: center;
+  list-style: none;
+  gap: calc(var(--gap-1, 1rem) * 1.5);
+}
+nav .hamburger-container {
+  display: none;
+}
+@media (max-width: 50rem) {
+  nav.show-nav {
+    box-shadow: unset;
+  }
+  nav .hamburger-container {
+    display: block;
+  }
+  nav ul {
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-primary);
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    scale: 1 0;
+    transition: var(--transition-2);
+    transform-origin: top;
+    padding-block: var(--gap-1);
+    align-items: unset !important;
+  }
+  nav ul.show {
+    scale: 1 1;
+  }
+}
+nav .link-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+nav .link-container iconify-icon {
+  font-size: 1.2em;
+}
+nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+nav a.active,
+nav a:active {
+  color: var(--text-secondary);
+}
+nav img {
+  aspect-ratio: 1;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+nav .logo a {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-container {
+  border: none;
+  width: 2.5rem;
+  background: none;
+  cursor: pointer;
+  height: 36px;
+  display: grid;
+  place-items: center;
+}
+.hamburger-container .hamburger {
+  display: inline-block;
+  position: relative;
+  height: 3px;
+  width: 100%;
+  background: var(--text-primary);
+  border-radius: 100vw;
+  transition: var(--transition-1);
+}
+.hamburger-container .hamburger::before, .hamburger-container .hamburger::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: inherit;
+  transition: var(--transition-1);
+  width: inherit;
+  background: inherit;
+  border-radius: 100vw;
+}
+.hamburger-container .hamburger::before {
+  top: -9px;
+}
+.hamburger-container .hamburger::after {
+  top: 9px;
+}
+.hamburger-container .hamburger.active {
+  rotate: 45deg;
+}
+.hamburger-container .hamburger.active::before {
+  top: 0;
+}
+.hamburger-container .hamburger.active::after {
+  rotate: -90deg;
+  top: 0;
+}
+.hamburger-container:hover {
+  opacity: 0.8;
+}
+
+.hover-animate {
+  position: relative;
+}
+.hover-animate::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  display: block;
+  border-radius: 100vw;
+  bottom: -2px;
+  transform: scale(0, 1);
+  transition: all 0.15s;
+}
+.hover-animate:hover::after {
+  transform: scale(1, 1);
+}
+.hover-animate:focus {
+  outline: none;
+}
+.hover-animate:focus::after {
+  transform: scale(1, 1);
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-primary: #dfdfe5;
+  --bg-secondary: #3cb043;
+  --bg-secondary: #5ca043;
+  --bg-header-footer: #0f172aaa;
+  --bg-textbox: #1e293b;
+  --bg-btn: #0ea5d9;
+  --text-primary: #333;
+  --text-secondary: #ddd;
+  --text-dark: #000;
+  --max-width: 96rem;
+  --nav-height: 4.5rem;
+  --gap-1: clamp(1rem, 3vw, 5rem);
+  --gap-small: 0.7rem;
+  --gap-lg: 1.4rem;
+  --shadow-1: 0 0 1rem #0008;
+  --shadow-2: 0 0 1rem #fff3;
+  --transition-1: all 0.3s;
+  --transition-2: all 0.1s;
+  --radius-1: 0.3em;
+  --fz-regular: 1rem;
+  --fz-sm: 0.8rem;
+  --fz-lg: 1.1rem;
+  --fz-xl: 1.2rem;
+  --fz-2xl: 1.5rem;
+  --fz-3xl: 2rem;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100vh;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+.hamburger-container {
+  $height: 3px;
+  $factor: 3;
+  $gap: $height * $factor;
+  $padding: $height * $factor;
+
+  border: none;
+  width: 2.5rem;
+  background: none;
+  cursor: pointer;
+  height: $height * $factor * 2 + $padding * 2;
+
+  // center
+  display: grid;
+  place-items: center;
+
+  .hamburger {
+    display: inline-block;
+    position: relative;
+    height: $height;
+    width: 100%;
+    background: var(--text-primary);
+    border-radius: 100vw;
+    transition: var(--transition-1);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: inherit;
+      transition: var(--transition-1);
+      width: inherit;
+      background: inherit;
+      border-radius: 100vw;
+    }
+
+    &::before {
+      top: $gap * -1;
+    }
+
+    &::after {
+      top: $gap;
+    }
+
+    &.active {
+      rotate: 45deg;
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        rotate: -90deg;
+        top: 0;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
