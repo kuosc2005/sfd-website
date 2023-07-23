@@ -68,6 +68,13 @@ h6 {
   isolation: isolate;
 }
 
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 nav.nav-primary {
   height: var(--nav-height);
   display: grid;
@@ -234,7 +241,7 @@ header {
   position: relative;
   height: 100vh;
   background: #1f1f15;
-  z-index: 0;
+  z-index: 100;
   display: grid;
   place-items: center;
 }
@@ -297,6 +304,196 @@ header .hero-section p {
   font-size: 2em;
 }
 
+main > section:nth-child(2n) {
+  background: var(--bg-secondary);
+}
+@media (min-width: 1000px) {
+  main > section:nth-child(2n) .info :first-child {
+    order: 2;
+  }
+}
+main section {
+  padding: var(--gap-1);
+  display: grid;
+  place-items: center;
+}
+main section .container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+main section .info {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-1);
+  font-size: var(--fz-xl);
+}
+main section .info > * {
+  border-radius: var(--radius-1) !important;
+  overflow: hidden !important;
+}
+main section .info > .image-container {
+  width: 100%;
+  object-fit: contain;
+}
+main section .info p {
+  max-width: 50ch;
+}
+main section .info .share {
+  all: unset;
+  cursor: pointer;
+  position: relative;
+}
+main section .info .share iconify-icon {
+  color: #0af;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5333333333);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 1;
+}
+main section .info .share:hover iconify-icon {
+  opacity: 1;
+}
+main h2 {
+  font-size: var(--fz-3xl);
+  position: relative;
+  width: fit-content;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  margin-bottom: var(--gap-lg);
+}
+main h2::after {
+  content: "";
+  display: block;
+  height: 0.2em;
+  width: 50%;
+  background: currentColor;
+}
+main .events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap-1);
+}
+main .events-container .events {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: calc(var(--radius-1) * 2);
+  padding-inline: var(--gap-1);
+  padding-block: calc(var(--gap-1) / 2);
+  padding-block: var(--gap-lg);
+  box-shadow: var(--shadow-2);
+}
+main .events-container .events h3 {
+  font-size: var(--fz-2xl);
+  text-align: center;
+  margin-bottom: var(--gap-lg);
+  width: fit-content;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+}
+main .events-container .events h3::after {
+  content: "";
+  display: block;
+  height: 0.2em;
+  opacity: 0.4;
+  width: 50%;
+  background: currentColor;
+}
+main .events-container .events p {
+  font-size: calc(var(--fz-2xl) * 0.9);
+  margin: calc(var(--gap-small) * 2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+main .events-container .events p::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  background: currentColor;
+  opacity: 0.2;
+  bottom: calc(var(--gap-small) * -1);
+}
+@media (max-width: 1000px) {
+  main .info,
+  main .events-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5333333333);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay.hidden {
+  display: none;
+}
+
+dialog.share-modal {
+  background: var(--bg-header-footer);
+  border: none;
+  font-family: inherit;
+  color: var(--text-secondary);
+  padding: var(--gap-1);
+}
+dialog.share-modal::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+dialog.share-modal [method=dialog] button {
+  padding: 0;
+  all: unset;
+  font-size: 3rem;
+  color: var(--text-secondary);
+  position: absolute;
+  top: calc(var(--gap-small) / 2);
+  right: calc(var(--gap-small) * 2);
+  cursor: pointer;
+}
+dialog.share-modal .btn-container {
+  padding: var(--gap-lg);
+}
+dialog.share-modal #copy-sfd {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: var(--fz-3xl);
+  cursor: pointer;
+  transition: var(--transition-1);
+  border-radius: var(--radius-1);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-small);
+}
+dialog.share-modal #copy-sfd:hover, dialog.share-modal #copy-sfd:focus {
+  background: rgba(255, 255, 255, 0.1333333333);
+}
+dialog.share-modal #copy-sfd iconify-icon {
+  color: #0ccaca;
+}
+dialog.share-modal #copy-sfd:active {
+  background: none;
+}
+
 :root {
   font-family: "Poppins", sans-serif;
 }
@@ -307,7 +504,7 @@ header .hero-section p {
   --bg-header-footer: #2a3d2a;
   --bg-textbox: #1e293b;
   --bg-btn: #0ea5d9;
-  --text-primary: #333;
+  --text-primary: #112;
   --text-secondary: #ddd;
   --text-dark: #000;
   --max-width: 96rem;

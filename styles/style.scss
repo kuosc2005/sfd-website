@@ -4,6 +4,9 @@
 @use "hover-animate";
 @use "hero";
 @use "countdown";
+@use "main";
+@use "overlay";
+@use "modal";
 
 // import font
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
@@ -20,7 +23,7 @@
   --bg-textbox: #1e293b;
   --bg-btn: #0ea5d9;
 
-  --text-primary: #333;
+  --text-primary: #112;
   --text-secondary: #ddd;
 
   --text-dark: #000;

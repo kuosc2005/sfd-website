@@ -92,3 +92,67 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 1000);
+
+////////////////////////////////////////
+// image share to social media
+////////////////////////////////////////
+
+const shareBtn = document.querySelector(".share");
+
+const removeOverlay = (e) => {
+	e.classList.add("hidden");
+};
+
+const shareOverlay = `
+	<div class="overlay" on:click="${removeOverlay}">
+		<button data-id="facebook">
+			<iconify-icon icon="logos:facebook" style="color: #05f;"></iconify-icon>
+		</button>
+		<button data-id="twitter">
+			<iconify-icon icon="logos:twitter" style="color: #05f;"></iconify-icon>
+		</button>
+		<button data-id="instagram">
+			<iconify-icon icon="logos:instagram" style="color: #05f;"></iconify-icon>
+		</button>
+	</div>
+`;
+
+let fb_sfd =
+	"https://www.facebook.com/dialog/share?app_id=87741124305&text=I love Software Freedom Day!&href=https://www.softwarefreedomday.org/images/warptheme/ilovesfd.png&display=popup";
+let whatshapp_sfd =
+	"https://api.whatsapp.com/send/?text=https://api.whatsapp.com/send/?text=https%3A%2F%2Fyoutu.be%2Fpq7NLMwynYg&type=custom_url&app_absent=0g&type=custom_url&app_absent=0";
+
+shareBtn.addEventListener("click", () => {
+	let modal = document.getElementById(`modal-sfd`);
+
+	if (!modal) {
+		modal = document.createElement("dialog");
+		modal.classList.add("share-modal");
+		modal.id = "modal-sfd";
+
+		modal.innerHTML = `
+				<div class="btn-container">
+					<button id="copy-sfd">Copy<iconify-icon icon="ion:copy"></iconify-icon></button>
+				</div>
+			`;
+
+		modal.innerHTML += `
+				<form method="dialog">
+					 <button>×</button>
+				</form>
+			`;
+		document.body.append(modal);
+	}
+
+	modal.showModal();
+});
+
+document.addEventListener("click", (e) => {
+	if (e.target.id === "copy-sfd") {
+		navigator.clipboard.writeText(
+			"https://www.softwarefreedomday.org/images/warptheme/ilovesfd.png"
+		);
+
+		e.target.innerHTML = 'Copied!<iconify-icon icon="ion:copy">';
+	}
+});
