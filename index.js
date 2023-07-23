@@ -24,7 +24,7 @@ hamburgerContainer.addEventListener("click", () => {
 const nav = document.querySelector(".nav-primary");
 
 document.addEventListener("scroll", () => {
-	if (window.scrollY > window.innerHeight / 2) {
+	if (window.scrollY > window.innerHeight * 0.25) {
 		nav.classList.add("scrolled");
 	} else {
 		nav.classList.remove("scrolled");
