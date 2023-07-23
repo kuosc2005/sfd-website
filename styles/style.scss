@@ -2,6 +2,8 @@
 @use "nav";
 @use "hamburger";
 @use "hover-animate";
+@use "hero";
+@use "countdown";
 
 // import font
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
@@ -12,9 +14,8 @@
 
 :root {
   --bg-primary: #dfdfe5;
-  --bg-secondary: #3cb043;
   --bg-secondary: #5ca043;
-  --bg-header-footer: #0f172aaa;
+  --bg-header-footer: #2a3d2a;
 
   --bg-textbox: #1e293b;
   --bg-btn: #0ea5d9;

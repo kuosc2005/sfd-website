@@ -1,13 +1,11 @@
 $blur: 10px;
-nav {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  background: var(--bg-secondary);
+nav.nav-primary {
   height: var(--nav-height);
   display: grid;
   place-items: center;
-  backdrop-filter: blur($blur);
-  box-shadow: var(--shadow-1);
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   & > div {
     width: 100%;
@@ -20,7 +18,6 @@ nav {
 
     ul {
       display: flex;
-      background: var(--bg-secondary);
       align-items: center;
       list-style: none;
       gap: calc(var(--gap-1, 1rem) * 1.5);
@@ -46,10 +43,10 @@ nav {
       margin: 0;
       left: 0;
       width: 100%;
-      background: var(--bg-primary);
       flex-direction: column;
       backdrop-filter: blur($blur);
       scale: 1 0;
+      box-shadow: 0 12px 10px #0002;
       transition: var(--transition-2);
       transform-origin: top;
       padding-block: var(--gap-1);
@@ -72,7 +69,7 @@ nav {
     }
   }
   a {
-    color: var(--text-primary);
+    color: var(--text-secondary);
     text-decoration: none;
     font-weight: 700;
   }
@@ -92,5 +89,15 @@ nav {
   .logo a {
     display: flex;
     align-items: center;
+  }
+}
+
+nav.nav-primary.scrolled {
+  box-shadow: var(--shadow-1);
+  background: var(--bg-header-footer);
+  backdrop-filter: blur($blur);
+
+  ul {
+    background: var(--bg-header-footer);
   }
 }

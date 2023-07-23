@@ -1,64 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>SFD 2023</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
 
-<head>
-	<title>SFD 2023</title>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link href="style.css" rel="stylesheet" />
-</head>
+  <body>
+    <header>
+      <img
+        src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        alt="Hero image"
+        class="hero-bg"
+      />
+      <nav class="nav-primary">
+        <div>
+          <!-- logo -->
+          <span class="logo" style="font-size: 1.6rem">
+            <a href="../">
+              <img src="assets/logo.png" alt="KUOSC" />
+              <span> KUOSC </span>
+            </a>
+          </span>
 
-<body>
-	<!-- <nav class={hamburgerClicked ? "show-nav" : "" }> -->
-	<nav class="nav-primary">
-		<div>
-			<!-- logo -->
-			<span class="logo" style="font-size: 1.6rem">
-				<a href="../">
-					<img src="assets/logo.png" alt="KUOSC" />
-					<span> KUOSC </span>
-				</a>
-			</span>
+          <!-- hamburger -->
+          <button class="hamburger-container">
+            <span class="sr-only">Navigation Menu</span>
+            <span class="hamburger" aria-label="Navigation Menu" />
+          </button>
 
-			<!-- hamburger -->
-			<button class="hamburger-container">
-				<span class="sr-only">Navigation Menu</span>
-				<span class="hamburger" aria-label="Navigation Menu" />
-			</button>
+          <ul class="nav-list" role="navigation">
+            <li class="nav-item">
+              <span class="link-container">
+                <a class="hover-animate nav-link" href="../"> Home </a>
+              </span>
+            </li>
 
-			<ul class="nav-list" role="navigation">
-				<li class="nav-item">
-					<span class="link-container">
-						<a class="hover-animate nav-link" href="../"> Home </a>
-					</span>
-				</li>
+            <li class="nav-item">
+              <span class="link-container">
+                <a class="hover-animate nav-link" href="#sfd"> About </a>
+              </span>
+            </li>
 
-				<li class="nav-item">
-					<span class="link-container">
-						<a class="hover-animate nav-link" href="#sfd"> About </a>
-					</span>
-				</li>
+            <li class="nav-item">
+              <span class="link-container">
+                <a class="hover-animate nav-link" href="#events"> Events </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-				<li class="nav-item">
-					<span class="link-container">
-						<a class="hover-animate nav-link" href="#events"> Events </a>
-					</span>
-				</li>
-			</ul>
-		</div>
-	</nav>
+      <!-- hero section -->
+      <section class="hero-section">
+        <h1>Software Freedom Day! 2023</h1>
+        <p>
+          Kathmandu University, 16 <sup>th</sup> & 17<sup>th</sup> September,
+          2023
+        </p>
 
-	<footer>
-		<div>
-			<b>Club Email: </b>
-			<a href="mailto:kucc@ku.edu.np">kucc@ku.edu.np</a>
-		</div>
-		<div>
-			<b>Club Website: </b><a href="https://kucc.ku.edu.np/" target="_blank">Kathmandu University Computer Club</a>
-		</div>
-	</footer>
+        <!-- countdown -->
+        <div class="countdown-container">
+          <div class="countdown animate__animated animate__lightSpeedInRight">
+            <div class="time">
+              <span id="days" class="num"></span>
+              <span class="text">Days</span>
+            </div>
+            <div class="time">
+              <span id="hours" class="num"></span>
+              <span class="text">Hours</span>
+            </div>
+            <div class="time">
+              <span id="minutes" class="num"></span>
+              <span class="text">Minutes</span>
+            </div>
+            <div class="time">
+              <span id="seconds" class="num"></span>
+              <span class="text">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
 
-	<script src="index.js"></script>
-</body>
+    <footer>
+      <div>
+        <b>Club Email: </b>
+        <a href="mailto:kucc@ku.edu.np">kucc@ku.edu.np</a>
+      </div>
+      <div>
+        <b>Club Website: </b
+        ><a href="https://kucc.ku.edu.np/" target="_blank"
+          >Kathmandu University Computer Club</a
+        >
+      </div>
+    </footer>
 
+    <script src="index.js"></script>
+  </body>
 </html>

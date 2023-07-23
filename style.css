@@ -68,17 +68,15 @@ h6 {
   isolation: isolate;
 }
 
-nav {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  background: var(--bg-secondary);
+nav.nav-primary {
   height: var(--nav-height);
   display: grid;
   place-items: center;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-1);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
-nav > div {
+nav.nav-primary > div {
   width: 100%;
   max-width: var(--max-width);
   height: 100%;
@@ -87,68 +85,76 @@ nav > div {
   justify-content: space-between;
   padding-inline: var(--gap-1);
 }
-nav > div ul {
+nav.nav-primary > div ul {
   display: flex;
-  background: var(--bg-secondary);
   align-items: center;
   list-style: none;
   gap: calc(var(--gap-1, 1rem) * 1.5);
 }
-nav .hamburger-container {
+nav.nav-primary .hamburger-container {
   display: none;
 }
 @media (max-width: 50rem) {
-  nav.show-nav {
+  nav.nav-primary.show-nav {
     box-shadow: unset;
   }
-  nav .hamburger-container {
+  nav.nav-primary .hamburger-container {
     display: block;
   }
-  nav ul {
+  nav.nav-primary ul {
     position: absolute;
     top: 100%;
     margin: 0;
     left: 0;
     width: 100%;
-    background: var(--bg-primary);
     flex-direction: column;
     backdrop-filter: blur(10px);
     scale: 1 0;
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1333333333);
     transition: var(--transition-2);
     transform-origin: top;
     padding-block: var(--gap-1);
     align-items: unset !important;
   }
-  nav ul.show {
+  nav.nav-primary ul.show {
     scale: 1 1;
   }
 }
-nav .link-container {
+nav.nav-primary .link-container {
   display: flex;
   align-items: center;
   gap: 0.3em;
 }
-nav .link-container iconify-icon {
+nav.nav-primary .link-container iconify-icon {
   font-size: 1.2em;
 }
-nav a {
-  color: var(--text-primary);
+nav.nav-primary a {
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 700;
 }
-nav a.active,
-nav a:active {
+nav.nav-primary a.active,
+nav.nav-primary a:active {
   color: var(--text-secondary);
 }
-nav img {
+nav.nav-primary img {
   aspect-ratio: 1;
   height: 4rem;
   border-radius: 50%;
   object-fit: cover;
 }
-nav .logo a {
+nav.nav-primary .logo a {
   display: flex;
   align-items: center;
+}
+
+nav.nav-primary.scrolled {
+  box-shadow: var(--shadow-1);
+  background: var(--bg-header-footer);
+  backdrop-filter: blur(10px);
+}
+nav.nav-primary.scrolled ul {
+  background: var(--bg-header-footer);
 }
 
 .hamburger-container {
@@ -165,7 +171,7 @@ nav .logo a {
   position: relative;
   height: 3px;
   width: 100%;
-  background: var(--text-primary);
+  background: var(--text-secondary);
   border-radius: 100vw;
   transition: var(--transition-1);
 }
@@ -224,15 +230,81 @@ nav .logo a {
   transform: scale(1, 1);
 }
 
+header {
+  position: relative;
+  height: 100vh;
+  background: #1f1f15;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+}
+header .hero-bg {
+  opacity: 0.2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+header .hero-section {
+  color: var(--text-secondary);
+  text-align: center;
+  --text-special: #19c219;
+}
+header .hero-section h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  padding-inline: var(--gap-lg);
+  color: var(--text-special);
+}
+header .hero-section p {
+  font-size: var(--fz-3xl);
+  padding-inline: var(--gap-lg);
+}
+
+.countdown-container {
+  --fz: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-size: calc(var(--fz) * 1.4);
+  padding-inline: 10vw;
+  padding-block: var(--gap-lg);
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+  align-items: center;
+  font-size: var(--fz);
+}
+.countdown .time {
+  backdrop-filter: blur(5px);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  border: 1px solid currentColor;
+  padding: 1rem;
+  border-radius: 0.25em;
+  box-shadow: inset 0 0 0.2em currentColor;
+  color: var(--text-special);
+  background-color: rgba(0, 50, 100, 0.2);
+}
+.countdown .time .num {
+  font-size: 2em;
+}
+
 :root {
   font-family: "Poppins", sans-serif;
 }
 
 :root {
   --bg-primary: #dfdfe5;
-  --bg-secondary: #3cb043;
   --bg-secondary: #5ca043;
-  --bg-header-footer: #0f172aaa;
+  --bg-header-footer: #2a3d2a;
   --bg-textbox: #1e293b;
   --bg-btn: #0ea5d9;
   --text-primary: #333;
