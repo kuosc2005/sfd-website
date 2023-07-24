@@ -151,9 +151,7 @@ nav.nav-primary a:active {
   color: var(--text-secondary);
 }
 nav.nav-primary img {
-  aspect-ratio: 1;
   height: 4rem;
-  border-radius: 50%;
   object-fit: cover;
 }
 nav.nav-primary .logo a {
