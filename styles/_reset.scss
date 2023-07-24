@@ -61,6 +61,12 @@ h6 {
   isolation: isolate;
 }
 
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* center the dialog */
 dialog {
   position: fixed;
   top: 50%;
