@@ -455,7 +455,7 @@ main .speaker {
   border-radius: calc(var(--radius-1) * 2);
   overflow: hidden;
   padding-bottom: var(--gap-lg);
-  background: rgba(0, 0, 0, 0.0666666667);
+  background: var(--bg-primary);
 }
 main .speaker img {
   aspect-ratio: 9/10;

@@ -173,7 +173,7 @@ main {
     border-radius: calc(var(--radius-1) * 2);
     overflow: hidden;
     padding-bottom: var(--gap-lg);
-    background: #0001;
+    background: var(--bg-primary);
 
     img {
       aspect-ratio: 9/10;
