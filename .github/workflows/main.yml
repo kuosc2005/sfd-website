@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Production Deploy
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ deploy ]
+  pull_request:
+    branches: [ deploy ]
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.kuosc.org.np
+        username: kuoscorg
+        password: ${{ secrets.ftppass }}
+        server-dir: public_html/sfd.kuosc.org.np/
