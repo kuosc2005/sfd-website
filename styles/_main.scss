@@ -105,7 +105,7 @@ main {
       p {
         font-size: calc(var(--fz-2xl) * 0.9);
 
-        @media (max-width: 1000px) {
+        @media (max-width: 50rem) {
           font-size: var(--fz-regular);
         }
 
