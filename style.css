@@ -403,6 +403,11 @@ main .events-container .events p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+@media (max-width: 1000px) {
+  main .events-container .events p {
+    font-size: var(--fz-regular);
+  }
+}
 main h3 {
   font-size: var(--fz-2xl);
   text-align: center;
@@ -577,6 +582,12 @@ footer a:hover {
 
 :root {
   font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  :root {
+    font-size: 0.8rem;
+  }
 }
 
 :root {

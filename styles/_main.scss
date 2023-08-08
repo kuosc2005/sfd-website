@@ -105,6 +105,10 @@ main {
       p {
         font-size: calc(var(--fz-2xl) * 0.9);
 
+        @media (max-width: 1000px) {
+          font-size: var(--fz-regular);
+        }
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
