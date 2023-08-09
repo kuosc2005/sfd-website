@@ -1,0 +1,95 @@
+---
+import "../styles/style.scss";
+import Nav from "../components/nav.astro";
+import Footer from "../components/footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code of Conduct</title>
+  </head>
+
+  <body>
+    <header>
+      <Nav notFixed={true} />
+    </header>
+    <main>
+      <h1>Code of Conduct</h1>
+      <p>
+        <b>Software Freedom Day</b> is dedicated to providing a harassment-free
+        experience for everyone, regardless of gender, sexual orientation,
+        gender identity, disability, physical appearance, body size, race, or
+        religion. We invite attendees to come to SFD in a spirit of curiosity,
+        friendliness, open-mindedness, and respect. Any kind of harassment will
+        not be tolerated.
+      </p>
+      <h2>At the conference venue, you agree to:</h2>
+      <ul>
+        <li>
+          Be kind and sensitive to the people around you and respect the
+          boundaries of other attendees.
+        </li>
+        <li>
+          Attempt to resolve differences of opinions peacefully and
+          appropriately for a professional environment.
+        </li>
+        <li>
+          Listen with empathy when someone has a different perspective and give
+          suggestions for improvement.
+        </li>
+      </ul>
+      <p>
+        This Code of Conduct applies to the venue of SFD 2023 Conference,
+        pre-event and post-event informal gathering, and all events organized by
+        the organizing committee of Software Freedom Day.
+      </p>
+      <p>
+        If you are being harassed, notice that someone else is being harassed,
+        or have any other concerns, please contact someone from the organizing
+        committee. Thank you for helping make this a welcoming, friendly event
+        for all.
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style lang="scss">
+  body {
+    color: var(--text-primary);
+  }
+
+  h1 {
+    font-size: var(--fz-3xl);
+    text-align: center;
+    padding-block-end: var(--gap-lg);
+    padding-block-start: var(--gap-1);
+  }
+
+  main {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+    padding-inline: var(--gap-small);
+
+    p {
+      margin-block: var(--gap-lg);
+    }
+
+    p,
+    li {
+      font-size: var(--fz-xl);
+    }
+  }
+
+  h2 {
+    font-size: var(--fz-xl);
+
+    &::after {
+      content: unset;
+    }
+  }
+</style>

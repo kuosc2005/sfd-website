@@ -1,0 +1,56 @@
+---
+const { notFixed } = Astro.props;
+---
+
+<nav class={`nav-primary ${!notFixed ? "": "not-fixed" }`}>
+	<div>
+		<!-- logo -->
+		<span class="logo">
+			<a href="/">
+				<img src="/assets/sfd-logo.svg" alt="Software Freedom Day" />
+			</a>
+		</span>
+
+		<!-- hamburger -->
+		<button class="hamburger-container">
+			<span class="sr-only">Navigation Menu</span>
+			<span class="hamburger" aria-label="Navigation Menu" />
+		</button>
+
+		<ul class="nav-list" role="navigation">
+			<li class="nav-item">
+				<span class="link-container">
+					<a class="hover-animate nav-link" href="/"> Home </a>
+				</span>
+			</li>
+
+			<li class="nav-item">
+				<span class="link-container">
+					<a class="hover-animate nav-link" href="#sfd"> About </a>
+				</span>
+			</li>
+
+			<li class="nav-item">
+				<span class="link-container">
+					<a class="hover-animate nav-link" href="#events"> Events </a>
+				</span>
+			</li>
+
+			<!-- <li class="nav-item"> -->
+			<!--   <span class="link-container"> -->
+			<!--     <a class="hover-animate nav-link" href="#schedule"> -->
+			<!--       Schedule -->
+			<!--     </a> -->
+			<!--   </span> -->
+			<!-- </li> -->
+			<!---->
+			<!-- <li class="nav-item"> -->
+			<!--   <span class="link-container"> -->
+			<!--     <a class="hover-animate nav-link" href="#speakers"> -->
+			<!--       Speakers -->
+			<!--     </a> -->
+			<!--   </span> -->
+			<!-- </li> -->
+		</ul>
+	</div>
+</nav>
