@@ -1,0 +1,62 @@
+---
+import "@styles/style.scss";
+import Layout from "src/layout.astro";
+import Nav from "@components/nav.astro";
+import Footer from "@components/footer.astro";
+---
+
+<Layout title="404 - Page Not Found | KUOSC">
+  <header>
+    <Nav notFixed />
+  </header>
+  <main>
+    <h1>Oops! Page Not Found</h1>
+    <p>
+      The page you're looking for might have been removed or is temporarily
+      unavailable.
+    </p>
+    <p>Here are a few things you can try:</p>
+    <ul>
+      <li>Check the URL for typos.</li>
+      <li>Go back to the <a href="/">homepage</a>.</li>
+      <li>Search for what you're looking for using the search bar.</li>
+    </ul>
+  </main>
+  <Footer />
+</Layout>
+
+<style lang="scss">
+  body {
+    color: var(--text-primary);
+  }
+
+  h1 {
+    font-size: var(--fz-3xl);
+    padding-block-end: var(--gap-lg);
+    padding-block-start: var(--gap-1);
+  }
+
+  main {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+    padding-inline: var(--gap-small);
+
+    p {
+      margin-block: var(--gap-lg);
+    }
+
+    p,
+    li {
+      font-size: var(--fz-xl);
+    }
+  }
+
+  h2 {
+    font-size: var(--fz-xl);
+
+    &::after {
+      content: unset;
+    }
+  }
+</style>
