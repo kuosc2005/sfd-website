@@ -2,243 +2,193 @@
 import '../styles/style.scss';
 import Nav from "../components/nav.astro";
 import Footer from "../components/footer.astro";
+import Layout from 'src/layout.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<Layout title="Software Development Day 2023 - KUOSC">
+	<header class="home">
+		<img src="/assets/hero.jpg" alt="Hero image" class="hero-bg" />
 
-    <!-- Primary Meta Tags -->
-    <title>Software Development Day 2023 - KUOSC</title>
-    <meta name="title" content="Software Development Day 2023 - KUOSC" />
-    <meta
-      name="description"
-      content="Software Freedom Day (SFD) is an annual global celebration of Free and Open Source Software(FOSS). It is celebrated with the aim to educate the public and increase awareness about Free software, its benefits and encouraging its use."
-    />
+		<!-- nav -->
+		<Nav />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sfd.kuosc.org.np" />
-    <meta property="og:title" content="Software Development Day 2023 - KUOSC" />
-    <meta
-      property="og:description"
-      content="Software Freedom Day (SFD) is an annual global celebration of Free and Open Source Software(FOSS). It is celebrated with the aim to educate the public and increase awareness about Free software, its benefits and encouraging its use."
-    />
-    <meta
-      property="og:image"
-      content="https://www.softwarefreedomday.org/images/warptheme/ilovesfd.png"
-    />
+		<!-- hero section -->
+		<section class="hero-section">
+			<h1>Software Freedom Day! 2023</h1>
+			<p>Kathmandu University, 16<sup>th</sup> September, 2023</p>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://sfd.kuosc.org.np" />
-    <meta
-      property="twitter:title"
-      content="Software Development Day 2023 - KUOSC"
-    />
-    <meta
-      property="twitter:description"
-      content="Software Freedom Day (SFD) is an annual global celebration of Free and Open Source Software(FOSS). It is celebrated with the aim to educate the public and increase awareness about Free software, its benefits and encouraging its use."
-    />
-    <meta
-      property="twitter:image"
-      content="https://www.softwarefreedomday.org/images/warptheme/ilovesfd.png"
-    />
-  </head>
+			<!-- countdown -->
+			<div class="countdown-container">
+				<div class="countdown animate__animated animate__lightSpeedInRight">
+					<div class="time">
+						<span id="days" class="num"></span>
+						<span class="text">Days</span>
+					</div>
+					<div class="time">
+						<span id="hours" class="num"></span>
+						<span class="text">Hours</span>
+					</div>
+					<div class="time">
+						<span id="minutes" class="num"></span>
+						<span class="text">Minutes</span>
+					</div>
+					<div class="time">
+						<span id="seconds" class="num"></span>
+						<span class="text">Seconds</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
 
-  <body>
-    <header class="home">
-      <img src="/assets/hero.jpg" alt="Hero image" class="hero-bg" />
+	<main>
+		<section id="sfd">
+			<h2>Software Freedom Day</h2>
+			<div class="container info">
+				<button class="image-container share" data-id="sfd">
+					<iconify-icon icon="material-symbols:share"></iconify-icon>
+					<img
+						src="http://softwarefreedomday.org/images/warptheme/ilovesfd.png"
+						alt="I LOVE SFD"
+					/>
+				</button>
+				<p>
+					<a href="https://softwarefreedomday.org" target="_blank"
+						>Software Freedom Day (SFD)</a
+					>
+					is an annual global celebration of Free and Open Source
+					Software(FOSS). It is celebrated with the aim to educate the public
+					and increase awareness about Free software, its benifits and
+					encouraging its use.Since its inception in 28 August, 2004 with
+					about 12 participating team, the community has steadily grown to the
+					current day where over 300 events are organized by over 100 cities
+					from across the world.
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2>Free And Open Software</h2>
+			<div class="container info">
+				<img src="/assets/FOSS.png" alt="FOSS" />
+				<p>
+					Free and Open Source Software (FOSS) refers to software that anyone
+					is freely licensed to use, copy, study and change in any way that
+					they want, and the source code is openly shared so that people are
+					encouraged to volunterily improve the design of the software. Use of
+					free software encourages learning and sharing what we have learned
+					with others in the community. Other benifits of using FOSS would be
+					to decreased software cost, protecting privecy and providing more
+					control to the users.
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2>KUOSC</h2>
+			<div class="container info">
+				<div class="image-container">
+					<img src="/assets/logo.png" alt="KUOSC" style="height: 25rem" />
+				</div>
+				<p>
+					<a href="https://kucc.ku.edu.np/kuosc/"
+						>Kathmandu University Open Source Community (KUOSC)</a
+					>
+					is the Open Source related wing of KUCC. It is a vibrant historic
+					community from Kathmandu University which provides a common platform
+					for all FOSS enthusiasts to discuss, share, and learn about free and
+					open source softwares. KUOSC is specifically focused on all the Open
+					Source related activities ranging from training programs like Linux
+					Talks, Useful Network Training to advocacy activities like Software
+					Freedom Day celebration and organizing different community level
+					workshops and events.
+				</p>
+			</div>
+		</section>
+		<!-- events -->
+		<section id="events">
+			<h2>Events</h2>
+			<div class="container events-container">
+				<div class="events">
+					<h3>SFD Eve</h3>
+					<p><b>Date</b> 15 September,2023</p>
+					<p><b>Time</b> 6:00 PM - 6:45 PM</p>
+					<p><b>Venue</b> Kathmandu University</p>
+				</div>
 
-			<!-- nav -->
-			<Nav />
+				<div class="events">
+					<h3>SFD Event</h3>
+					<p><b>Date</b> 16 September,2023</p>
+					<p><b>Time</b> 10:20 AM - 3:00 PM</p>
+					<p><b>Venue</b> Kathmandu University</p>
+				</div>
+			</div>
+		</section>
 
-      <!-- hero section -->
-      <section class="hero-section">
-        <h1>Software Freedom Day! 2023</h1>
-        <p>Kathmandu University, 16<sup>th</sup> September, 2023</p>
-
-        <!-- countdown -->
-        <div class="countdown-container">
-          <div class="countdown animate__animated animate__lightSpeedInRight">
-            <div class="time">
-              <span id="days" class="num"></span>
-              <span class="text">Days</span>
-            </div>
-            <div class="time">
-              <span id="hours" class="num"></span>
-              <span class="text">Hours</span>
-            </div>
-            <div class="time">
-              <span id="minutes" class="num"></span>
-              <span class="text">Minutes</span>
-            </div>
-            <div class="time">
-              <span id="seconds" class="num"></span>
-              <span class="text">Seconds</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </header>
-
-    <main>
-      <section id="sfd">
-        <h2>Software Freedom Day</h2>
-        <div class="container info">
-          <button class="image-container share" data-id="sfd">
-            <iconify-icon icon="material-symbols:share"></iconify-icon>
-            <img
-              src="http://softwarefreedomday.org/images/warptheme/ilovesfd.png"
-              alt="I LOVE SFD"
-            />
-          </button>
-          <p>
-            <a href="https://softwarefreedomday.org" target="_blank"
-              >Software Freedom Day (SFD)</a
-            >
-            is an annual global celebration of Free and Open Source
-            Software(FOSS). It is celebrated with the aim to educate the public
-            and increase awareness about Free software, its benifits and
-            encouraging its use.Since its inception in 28 August, 2004 with
-            about 12 participating team, the community has steadily grown to the
-            current day where over 300 events are organized by over 100 cities
-            from across the world.
-          </p>
-        </div>
-      </section>
-      <section>
-        <h2>Free And Open Software</h2>
-        <div class="container info">
-          <img src="/assets/FOSS.png" alt="FOSS" />
-          <p>
-            Free and Open Source Software (FOSS) refers to software that anyone
-            is freely licensed to use, copy, study and change in any way that
-            they want, and the source code is openly shared so that people are
-            encouraged to volunterily improve the design of the software. Use of
-            free software encourages learning and sharing what we have learned
-            with others in the community. Other benifits of using FOSS would be
-            to decreased software cost, protecting privecy and providing more
-            control to the users.
-          </p>
-        </div>
-      </section>
-      <section>
-        <h2>KUOSC</h2>
-        <div class="container info">
-          <div class="image-container">
-            <img src="/assets/logo.png" alt="KUOSC" style="height: 25rem" />
-          </div>
-          <p>
-            <a href="https://kucc.ku.edu.np/kuosc/"
-              >Kathmandu University Open Source Community (KUOSC)</a
-            >
-            is the Open Source related wing of KUCC. It is a vibrant historic
-            community from Kathmandu University which provides a common platform
-            for all FOSS enthusiasts to discuss, share, and learn about free and
-            open source softwares. KUOSC is specifically focused on all the Open
-            Source related activities ranging from training programs like Linux
-            Talks, Useful Network Training to advocacy activities like Software
-            Freedom Day celebration and organizing different community level
-            workshops and events.
-          </p>
-        </div>
-      </section>
-      <!-- events -->
-      <section id="events">
-        <h2>Events</h2>
-        <div class="container events-container">
-          <div class="events">
-            <h3>SFD Eve</h3>
-            <p><b>Date</b> 15 September,2023</p>
-            <p><b>Time</b> 6:00 PM - 6:45 PM</p>
-            <p><b>Venue</b> Kathmandu University</p>
-          </div>
-
-          <div class="events">
-            <h3>SFD Event</h3>
-            <p><b>Date</b> 16 September,2023</p>
-            <p><b>Time</b> 10:20 AM - 3:00 PM</p>
-            <p><b>Venue</b> Kathmandu University</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- schedule -->
-      <!-- <section id="schedule"> -->
-      <!--   <h2>Schedule For The Event</h2> -->
-      <!--   <div class="container schedule"> -->
-      <!--     <h3>Time</h3> -->
-      <!--     <h3>Topic</h3> -->
-      <!--     <h3>Speaker</h3> -->
-      <!--     <p>10:30 AM - 10:40 AM</p> -->
-      <!--     <p>Welcome & Introduction to SFD</p> -->
-      <!--     <p>Sagar Uprety</p> -->
-      <!--     <p>10:40 AM - 10:50 AM</p> -->
-      <!--     <p>About KUOSC and FOSS</p> -->
-      <!--     <p>Sajan Mahat</p> -->
-      <!--     <p>11:00 AM - 11:30 AM</p> -->
-      <!--     <p>Open Source Community and FOSS movement in Nepal</p> -->
-      <!--     <p>Arjun Gautam</p> -->
-      <!--     <p>11:30 AM - 12:00 PM</p> -->
-      <!--     <p>Open Source: Contributing beyond code</p> -->
-      <!--     <p>Ichchha Moktan</p> -->
-      <!--     <p>12:00 PM - 1:20 PM</p> -->
-      <!--     <p>VLC Localization</p> -->
-      <!--     <p>Saroj Dhakal</p> -->
-      <!--     <p>1:20 PM - 1:35 PM</p> -->
-      <!--     <p>Tea / Coffee Break</p> -->
-      <!--     <p></p> -->
-      <!--     <p>1:35 PM - 2:10 PM</p> -->
-      <!--     <p>Open Data: Why does it matter?</p> -->
-      <!--     <p>Nikesh Balami</p> -->
-      <!--     <p>2:10 PM - 2:40 PM</p> -->
-      <!--     <p>Closing Ceremony</p> -->
-      <!--     <p></p> -->
-      <!--   </div> -->
-      <!-- </section> -->
-      <!---->
-      <!-- <!-- speakers -->
-      <!-- <section id="speakers"> -->
-      <!--   <h2>Speakers</h2> -->
-      <!--   <div class="container speakers"> -->
-      <!--     <div class="speaker"> -->
-      <!--       <img src="https://unsplash.it/500/500" alt="" /> -->
-      <!--       <h3>Hello World</h3> -->
-      <!--       <p>hello worldddddd</p> -->
-      <!--     </div> -->
-      <!--     <div class="speaker"> -->
-      <!--       <img src="https://unsplash.it/500/500" alt="" /> -->
-      <!--       <h3>Hello World</h3> -->
-      <!--       <p>hello worldddddd</p> -->
-      <!--     </div> -->
-      <!--     <div class="speaker"> -->
-      <!--       <img src="https://unsplash.it/500/500" alt="" /> -->
-      <!--       <h3>Hello World</h3> -->
-      <!--       <p>hello worldddddd</p> -->
-      <!--     </div> -->
-      <!--     <div class="speaker"> -->
-      <!--       <img src="https://unsplash.it/500/500" alt="" /> -->
-      <!--       <h3>Hello World</h3> -->
-      <!--       <p>hello worldddddd</p> -->
-      <!--     </div> -->
-      <!--     <div class="speaker"> -->
-      <!--       <img src="https://unsplash.it/500/500" alt="" /> -->
-      <!--       <h3>Hello World</h3> -->
-      <!--       <p>hello worldddddd</p> -->
-      <!--     </div> -->
-      <!--   </div> -->
-      <!-- </section> -->
-    </main>
-		<Footer />
-    <script src="../index.js"></script>
-  </body>
-</html>
+		<!-- schedule -->
+		<!-- <section id="schedule"> -->
+		<!--   <h2>Schedule For The Event</h2> -->
+		<!--   <div class="container schedule"> -->
+		<!--     <h3>Time</h3> -->
+		<!--     <h3>Topic</h3> -->
+		<!--     <h3>Speaker</h3> -->
+		<!--     <p>10:30 AM - 10:40 AM</p> -->
+		<!--     <p>Welcome & Introduction to SFD</p> -->
+		<!--     <p>Sagar Uprety</p> -->
+		<!--     <p>10:40 AM - 10:50 AM</p> -->
+		<!--     <p>About KUOSC and FOSS</p> -->
+		<!--     <p>Sajan Mahat</p> -->
+		<!--     <p>11:00 AM - 11:30 AM</p> -->
+		<!--     <p>Open Source Community and FOSS movement in Nepal</p> -->
+		<!--     <p>Arjun Gautam</p> -->
+		<!--     <p>11:30 AM - 12:00 PM</p> -->
+		<!--     <p>Open Source: Contributing beyond code</p> -->
+		<!--     <p>Ichchha Moktan</p> -->
+		<!--     <p>12:00 PM - 1:20 PM</p> -->
+		<!--     <p>VLC Localization</p> -->
+		<!--     <p>Saroj Dhakal</p> -->
+		<!--     <p>1:20 PM - 1:35 PM</p> -->
+		<!--     <p>Tea / Coffee Break</p> -->
+		<!--     <p></p> -->
+		<!--     <p>1:35 PM - 2:10 PM</p> -->
+		<!--     <p>Open Data: Why does it matter?</p> -->
+		<!--     <p>Nikesh Balami</p> -->
+		<!--     <p>2:10 PM - 2:40 PM</p> -->
+		<!--     <p>Closing Ceremony</p> -->
+		<!--     <p></p> -->
+		<!--   </div> -->
+		<!-- </section> -->
+		<!---->
+		<!-- <!-- speakers -->
+		<!-- <section id="speakers"> -->
+		<!--   <h2>Speakers</h2> -->
+		<!--   <div class="container speakers"> -->
+		<!--     <div class="speaker"> -->
+		<!--       <img src="https://unsplash.it/500/500" alt="" /> -->
+		<!--       <h3>Hello World</h3> -->
+		<!--       <p>hello worldddddd</p> -->
+		<!--     </div> -->
+		<!--     <div class="speaker"> -->
+		<!--       <img src="https://unsplash.it/500/500" alt="" /> -->
+		<!--       <h3>Hello World</h3> -->
+		<!--       <p>hello worldddddd</p> -->
+		<!--     </div> -->
+		<!--     <div class="speaker"> -->
+		<!--       <img src="https://unsplash.it/500/500" alt="" /> -->
+		<!--       <h3>Hello World</h3> -->
+		<!--       <p>hello worldddddd</p> -->
+		<!--     </div> -->
+		<!--     <div class="speaker"> -->
+		<!--       <img src="https://unsplash.it/500/500" alt="" /> -->
+		<!--       <h3>Hello World</h3> -->
+		<!--       <p>hello worldddddd</p> -->
+		<!--     </div> -->
+		<!--     <div class="speaker"> -->
+		<!--       <img src="https://unsplash.it/500/500" alt="" /> -->
+		<!--       <h3>Hello World</h3> -->
+		<!--       <p>hello worldddddd</p> -->
+		<!--     </div> -->
+		<!--   </div> -->
+		<!-- </section> -->
+	</main>
+	<Footer />
+	<script src="../index.js"></script>
+</Layout>
