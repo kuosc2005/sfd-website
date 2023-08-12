@@ -51,18 +51,13 @@ jobs:
         run: npm install
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
-        run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
+        run: npm run build
         working-directory: ${{ env.BUILD_PATH }}
-      - name: get pwd
-        run: pwd
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ftp.kuosc.org.np
           username: kuosc
           password: ${{ secrets.ftppass }}
-          local-dir: /home/runner/work/sfd-website/sfd-website/dist/
+          local-dir: ${{ env.BUILD_PATH }}/dist/
           server-dir: public_html/sfd.kuosc.org.np/
