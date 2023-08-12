@@ -48,7 +48,7 @@ jobs:
           node-version: "latest"
           
       - name: Install dependencies
-        run: npm -i
+        run: npm install
         working-directory: ${{ env.BUILD_PATH }}
       - name: Build with Astro
         run: |
