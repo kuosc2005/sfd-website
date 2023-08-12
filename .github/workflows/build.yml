@@ -62,5 +62,5 @@ jobs:
           server: ftp.kuosc.org.np
           username: kuosc
           password: ${{ secrets.ftppass }}
-          local-dir: ${{ env.BUILD_PATH }}/dist/
+          local-dir: /home/runner/work/sfd-website/sfd-website/dist/
           server-dir: public_html/sfd.kuosc.org.np/
