@@ -56,8 +56,8 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: ftp.kuosc.org.np
-          username: kuosc
+          server: ${{ secrets.ftpserver }}
+          username: ${{ secrets.ftpuser }}
           password: ${{ secrets.ftppass }}
           local-dir: ${{ env.BUILD_PATH }}/dist/
           server-dir: public_html/sfd.kuosc.org.np/
