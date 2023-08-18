@@ -4,14 +4,13 @@ footer {
   height: var(--footer-height);
   font-size: var(--fz-xl);
   display: grid;
-  place-content: center;
 
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
 
