@@ -8,6 +8,7 @@
 @use "overlay";
 @use "modal";
 @use "footer";
+@use "button";
 
 // import font
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
@@ -61,8 +62,6 @@
   --fz-xl: 1.2rem;
   --fz-2xl: 1.5rem;
   --fz-3xl: 2rem;
-
-  
 }
 
 body {
