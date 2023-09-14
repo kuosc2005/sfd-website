@@ -19,19 +19,25 @@
 
   // set font size
   font-size: 1rem;
+}
 
-  @media (max-width: 50rem) {
+@media (max-width: 50rem) {
+  :root {
     font-size: 0.8rem;
+  }
+
+  * {
+    line-height: 2;
   }
 }
 
 :root {
   --bg-primary: #dfdfe5;
-  --bg-secondary: #5ca043;
+  --bg-secondary: #477336;
   --bg-header-footer: #2a3d2a;
 
   --bg-textbox: #1e293b;
-  --bg-btn: #0ea5d9;
+  --bg-btn: #5ca043;
 
   --text-primary: #112;
   --text-secondary: #ddd;
