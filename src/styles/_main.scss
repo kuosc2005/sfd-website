@@ -1,6 +1,7 @@
 main {
   & > section:nth-child(2n) {
     background: var(--bg-secondary);
+    color: var(--text-secondary);
 
     @media (min-width: 1000px) {
       .info :first-child {
@@ -77,12 +78,12 @@ main {
     gap: var(--gap-1);
 
     .events {
-      background: #fff3;
+      background: #0002;
       border-radius: calc(var(--radius-1) * 2);
       padding-inline: var(--gap-1);
       padding-block: calc(var(--gap-1) / 2);
       padding-block: var(--gap-lg);
-      box-shadow: var(--shadow-2);
+      box-shadow: var(--shadow-3);
 
       p {
         font-size: calc(var(--fz-2xl) * 0.9);
@@ -185,6 +186,11 @@ main {
     .info,
     .events-container {
       grid-template-columns: 1fr !important;
+
+      .image-container {
+        display: grid;
+        place-items: center;
+      }
     }
   }
 }
