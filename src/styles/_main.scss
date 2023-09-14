@@ -162,11 +162,13 @@ main {
     overflow: hidden;
     padding-bottom: var(--gap-lg);
     background: var(--bg-primary);
+    width: 20rem;
 
     img {
+      width: 100%;
       aspect-ratio: 9/10;
-      height: 20rem;
       box-shadow: var(--shadow-2);
+      object-fit: cover;
     }
 
     h3 {
