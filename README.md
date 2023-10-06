@@ -6,7 +6,7 @@
 
 Welcome to the repository for the Software Freedom Day (SFD) website associated with the Kathmandu University Open Source Community (KUOSC). This website serves as an informational platform for the annual global celebration of Free and Open Source Software (FOSS) at Kathmandu University.
 
-## ℹ️ About Software Freedom Day
+## About Software Freedom Day
 
 Software Freedom Day (SFD) is an annual global celebration of Free and Open Source Software (FOSS). It aims to educate the public and increase awareness about the benefits of free software, as well as encourage its use. SFD has been celebrated since its inception on August 28, 2004, and has grown into a global event with over 300 events organized by over 100 cities worldwide.
 
