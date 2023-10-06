@@ -41,4 +41,9 @@ The event featured renowned speakers from the open-source community:
 - **Aadarsha Dhakal:** KUOSC Coordinator
 - **Samikshya Upadhyay:** KUOSC Member
 
-## 📧 Contact
+## 📞 Contact Us
+
+If you have any questions, suggestions, or need assistance, please feel free to reach out to us at [kucc@ku.edu.np](mailto:kucc@ku.edu.np).
+
+---
+
