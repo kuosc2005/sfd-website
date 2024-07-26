@@ -87,3 +87,12 @@ body {
   white-space: nowrap;
   border-width: 0;
 }
+
+a {
+  color: #477336;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
