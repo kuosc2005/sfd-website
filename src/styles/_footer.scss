@@ -24,8 +24,10 @@ footer {
   }
 
   a {
-    color: #0ff;
+    color: rgb(111, 223, 223);
     opacity: 0.7;
+    font-size: smaller;
+    text-decoration: none;
 
     &:hover {
       opacity: 0.5;
@@ -36,5 +38,6 @@ footer {
     background: var(--bg-primary);
     padding: 0.5rem;
     border-radius: 0.5rem;
+    
   }
 }
