@@ -12,7 +12,6 @@
 
 // import font
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
-
 :root {
   // set font family
   font-family: "Poppins", sans-serif;
@@ -86,4 +85,20 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+a {
+  color: #477336;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  
 }

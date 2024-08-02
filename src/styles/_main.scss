@@ -26,12 +26,12 @@ main {
         overflow: hidden !important;
       }
 
-      display: grid;
+      &{display: grid;
       place-items: center;
       grid-template-columns: repeat(2, 1fr);
 
       gap: var(--gap-1);
-      font-size: var(--fz-xl);
+      font-size: var(--fz-xl);}
 
       & > .image-container {
         width: 100%;
