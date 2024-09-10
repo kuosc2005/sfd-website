@@ -196,6 +196,14 @@ main {
       }
     }
   }
+
+  #sfd {
+    p {
+      font-size: var(--fz-xl);
+      max-width: 80ch;
+      text-align: center;
+    }
+  }
 }
 
 h2 {
