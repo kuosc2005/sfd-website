@@ -45,7 +45,7 @@ const twoDigitFormat = (time) => {
 };
 
 const updateRemainingTime = () => {
-	const eventDate = new Date("September 21, 2024 00:00:00").getTime();
+	const eventDate = new Date("September 20, 2025 00:00:00").getTime();
 	const currentDate = new Date().getTime();
 
 	const difference = eventDate - currentDate;
