@@ -16,15 +16,17 @@ KUOSC is the Open Source-related wing of Kathmandu University Computer Club (KUC
 
 ## 📅 Events
 
-### 🌟 SFD Eve
-- **Date:** 15 September, 2023
-- **Time:** 6:00 PM - 6:45 PM
-- **Venue:** KU Library Lawn
+Come back later
 
-### 🎉 SFD Event
-- **Date:** 16 September, 2023
-- **Time:** 11:00 AM - 4:00 PM
-- **Venue:** KU Ciku Hall
+%%### 🌟 SFD Eve
+%%- **Date:** 15 September, 2023
+%%- **Time:** 6:00 PM - 6:45 PM
+%%- **Venue:** KU Library Lawn
+%%
+%%### 🎉 SFD Event
+%%- **Date:** 16 September, 2023
+%%- **Time:** 11:00 AM - 4:00 PM
+%%- **Venue:** KU Ciku Hall
 
 These events provided a platform for participants to learn about the world of open-source software, its history, and its impact on various fields.
 
@@ -33,13 +35,14 @@ During the Software Freedom Day Event, several informative sessions were conduct
 ## 🎙️ Speakers
 The event featured renowned speakers from the open-source community:
 
-- **Jurgen Gaeremyn:** Document Freedom Foundation
-- **Saroj Dhakal:** Localization Expert
-- **Shubham Joshi:** Network Engineer at Dish Media Network Ltd.
-- **Arjun Gautam:** Open Tech Community
-- **Damodar Lohani:** Open Source Contributor
-- **Aadarsha Dhakal:** KUOSC Coordinator
-- **Samikshya Upadhyay:** KUOSC Member
+Come back later
+%%- **Jurgen Gaeremyn:** Document Freedom Foundation
+%%- **Saroj Dhakal:** Localization Expert
+%%- **Shubham Joshi:** Network Engineer at Dish Media Network Ltd.
+%%- **Arjun Gautam:** Open Tech Community
+%%- **Damodar Lohani:** Open Source Contributor
+%%- **Aadarsha Dhakal:** KUOSC Coordinator
+%%- **Samikshya Upadhyay:** KUOSC Member
 
 ## 📞 Contact Us
 
