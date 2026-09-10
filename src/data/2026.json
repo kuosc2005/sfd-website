@@ -1,0 +1,45 @@
+{
+  "year": 2026,
+  "title": "Software Freedom Day 2026",
+  "shortTitle": "SFD 2026",
+  
+  "event": {
+    "date": "September 19, 2026",
+    "dateISO": "2026-09-19",
+    "venue": "Kathmandu University",
+    "venueFull": "Kathmandu University, KU CIKU Hall"
+  },
+
+  "registerUrl": "https://luma.com/nq6agann",
+
+  "events": [
+    {
+      "name": "SFD Eve",
+      "date": "September 18, 2026",
+      "time": "5:00 PM onwards",
+      "venue": "KU Fountain"
+    },
+    {
+      "name": "SFD Main Event",
+      "date": "September 19, 2026",
+      "time": "11:00 AM - 4:00 PM",
+      "venue": "KU CIKU Hall"
+    }
+  ],
+
+  "speakers": [
+    {
+      "name": "TBA",
+      "affiliation": "To Be Announced",
+      "photo": "/assets/logo.png"
+    }
+  ],
+
+  "schedule": [
+    {
+      "time": "TBA",
+      "topic": "Schedule coming soon",
+      "speaker": ""
+    }
+  ]
+}

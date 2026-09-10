@@ -1,0 +1,182 @@
+{
+  "year": 2025,
+  "title": "Software Freedom Day 2025",
+  "shortTitle": "SFD 2025",
+  
+  "event": {
+    "date": "September 20, 2025",
+    "dateISO": "2025-09-20",
+    "venue": "Kathmandu University",
+    "venueFull": "Kathmandu University, KU CIKU Hall"
+  },
+
+  "registerUrl": "https://luma.com/example",
+
+  "events": [
+    {
+      "name": "SFD Eve",
+      "date": "September 19, 2025",
+      "time": "5:00 PM onwards",
+      "venue": "KU Fountain"
+    },
+    {
+      "name": "SFD Main Event",
+      "date": "September 20, 2025",
+      "time": "11:00 AM - 4:00 PM",
+      "venue": "KU CIKU Hall"
+    }
+  ],
+
+  "speakers": [
+    {
+      "name": "Jurgen Gaeremyn",
+      "affiliation": "Document Freedom Foundation",
+      "photo": "/jurgen.webp"
+    },
+    {
+      "name": "Saroj Dahal",
+      "affiliation": "Content Creator at EverydayKarma",
+      "photo": "/saroj.webp"
+    },
+    {
+      "name": "Bishworaj Poudel",
+      "affiliation": "Content Creator at Technology Channel",
+      "photo": "/bishworaj.webp"
+    },
+    {
+      "name": "Nikesh Balami",
+      "affiliation": "Open Tech Community",
+      "photo": "/nikesh.webp"
+    },
+    {
+      "name": "Damodar Lohani",
+      "affiliation": "Open Source Contributor",
+      "photo": "/damodar.webp"
+    },
+    {
+      "name": "Prayas Poudel",
+      "affiliation": "Open Source Contributor",
+      "photo": "/prayas.webp"
+    },
+    {
+      "name": "Aaditya Singh",
+      "affiliation": "President, GNOME Nepal",
+      "photo": "/aaditya.webp"
+    },
+    {
+      "name": "Prabin Gautam",
+      "affiliation": "Past KUOSC Coordinator",
+      "photo": "/prabin.webp"
+    },
+    {
+      "name": "Sanjog Sigdel",
+      "affiliation": "KUCC Advisor",
+      "photo": "/sanjog.webp"
+    },
+    {
+      "name": "Sabin Thapa",
+      "affiliation": "Github Campus Expert",
+      "photo": "/sabin.webp"
+    },
+    {
+      "name": "Sugat Sujakhu",
+      "affiliation": "KUOSC Coordinator",
+      "photo": "/sugat.webp"
+    },
+    {
+      "name": "Ashwini Subedi",
+      "affiliation": "KUOSC Member",
+      "photo": "/ashwini.webp"
+    },
+    {
+      "name": "Sunidhi Sharma",
+      "affiliation": "KUOSC Member",
+      "photo": "/sunidhi.webp"
+    }
+  ],
+
+  "schedule": [
+    {
+      "time": "11:10 - 11:15",
+      "topic": "Introduction to KUOSC, FOSS and SFD",
+      "speaker": "Sugat Sujakhu"
+    },
+    {
+      "time": "11:15 - 11:30",
+      "topic": "Introduction to GNOME Nepal",
+      "speaker": "Aaditya Singh"
+    },
+    {
+      "time": "11:30 - 11:45",
+      "topic": "The Origin of KUOSC",
+      "speaker": "Prabin Gautam"
+    },
+    {
+      "time": "11:45 - 12:10",
+      "topic": "DFF's Legacy and the Role of Local Communities",
+      "speaker": "Jurgen Gaeremyn"
+    },
+    {
+      "time": "12:10 - 12:40",
+      "topic": "A Fun Session about FOSS",
+      "speaker": "Sabin Thapa"
+    },
+    {
+      "time": "12:40 - 13:00",
+      "topic": "A Talk on Open Data",
+      "speaker": "Nikesh Balami"
+    },
+    {
+      "time": "13:00 - 13:30",
+      "topic": "Tea Break / Open Discussion",
+      "speaker": ""
+    },
+    {
+      "time": "13:30 - 14:30",
+      "topic": "Panel Discussion",
+      "speaker": "Saroj Dahal, Damodar Lohani, Sanjog Sigdel, Prayas Poudel"
+    },
+    {
+      "time": "14:30 - 14:50",
+      "topic": "Open Source Licenses",
+      "speaker": "Sunidhi Sharma"
+    },
+    {
+      "time": "14:50 - 15:10",
+      "topic": "Containers and Virtualization",
+      "speaker": "Aayush Pokharel"
+    },
+    {
+      "time": "15:10 - 15:30",
+      "topic": "Introduction to Localization",
+      "speaker": "Ashwini Subedi"
+    },
+    {
+      "time": "15:30 - 15:45",
+      "topic": "Top Contributor Prize Distribution",
+      "speaker": ""
+    },
+    {
+      "time": "15:45 - 16:00",
+      "topic": "Cake Cutting and photo session",
+      "speaker": ""
+    }
+  ],
+
+  "gallery": {
+    "years": [
+      {
+        "year": 2023,
+        "path": "/2023",
+        "images": [
+          "aadarsha.webp",
+          "arjun.webp",
+          "mudita.svg",
+          "samikshya.webp",
+          "saroj.webp",
+          "subham.webp"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+---
+import '../styles/style.scss';
+import Nav from "../components/nav.astro";
+import Footer from "../components/footer.astro";
+import Layout from 'src/layout.astro';
+import { sfd, gallery } from '../data';
+---
+
+<Layout title={`Gallery - ${sfd.shortTitle}`}>
+  <Nav notFixed={true} />
+
+  <main>
+    <section class="">
+      <h1>Gallery</h1>
+      
+      {gallery.years.map(yearData => (
+        <div class="gallery-year">
+          <h2>{yearData.year}</h2>
+          <div class="gallery-grid">
+            {yearData.images.length > 0 ? (
+              yearData.images.map(image => (
+                <div class="gallery-item">
+                  <img src={`${yearData.path}/${image}`} alt={`SFD ${yearData.year}`} title={`${yearData.path}/${image}`}/>
+                </div>
+              ))
+            ) : (
+              <p class="no-images">Photos coming soon...</p>
+            )}
+          </div>
+        </div>
+      ))}
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .gallery-page {
+    padding: 10rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery-page h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .gallery-year {
+    margin-bottom: 3rem;
+  }
+
+  .gallery-year h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .no-images {
+    color: #666;
+    font-style: italic;
+  }
+</style>

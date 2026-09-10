@@ -1,8 +1,8 @@
 ---
-const { notFixed } = Astro.props;
+const { notFixed, solid } = Astro.props;
 ---
 
-<nav class={`nav-primary ${!notFixed ? "" : "not-fixed"}`}>
+<nav class={`nav-primary ${!notFixed ? "" : "not-fixed"} ${solid ? "solid" : ""}`}>
   <div>
     <!-- logo -->
     <span class="logo">
@@ -26,27 +26,33 @@ const { notFixed } = Astro.props;
 
       <li class="nav-item">
         <span class="link-container">
-          <a class="hover-animate nav-link" href="#sfd"> About</a>
+          <a class="hover-animate nav-link" href="/#sfd"> About</a>
         </span>
       </li>
-      <!---->
-      <!-- <li class="nav-item"> -->
-      <!--   <span class="link-container"> -->
-      <!--     <a class="hover-animate nav-link" href="#events"> Events</a> -->
-      <!--   </span> -->
-      <!-- </li> -->
 
-      <!-- <li class="nav-item"> -->
-      <!--   <span class="link-container"> -->
-      <!--     <a class="hover-animate nav-link" href="#schedule"> Schedule</a> -->
-      <!--   </span> -->
-      <!-- </li> -->
-      <!---->
-      <!-- <li class="nav-item"> -->
-      <!--   <span class="link-container"> -->
-      <!--     <a class="hover-animate nav-link" href="#speakers"> Speakers</a> -->
-      <!--   </span> -->
-      <!-- </li> -->
+      <li class="nav-item">
+        <span class="link-container">
+          <a class="hover-animate nav-link" href="/#events"> Events</a>
+        </span>
+      </li>
+
+      <li class="nav-item">
+        <span class="link-container">
+          <a class="hover-animate nav-link" href="/#schedule"> Schedule</a>
+        </span>
+      </li>
+
+      <li class="nav-item">
+        <span class="link-container">
+          <a class="hover-animate nav-link" href="/#speakers"> Speakers</a>
+        </span>
+      </li>
+
+      <li class="nav-item">
+        <span class="link-container">
+          <a class="hover-animate nav-link" href="/gallery"> Gallery</a>
+        </span>
+      </li>
     </ul>
   </div>
 </nav>

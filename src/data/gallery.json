@@ -1,0 +1,23 @@
+{
+  "years": [
+    {
+      "year": 2023,
+      "path": "/2023",
+      "images": [
+        "aadarsha.webp",
+        "arjun.webp",
+        "mudita.svg",
+        "samikshya.webp",
+        "saroj.webp",
+        "subham.webp",
+        "hero2023.jpg"
+      ]
+    },
+    {
+      "year": 2025,
+      "path": "/2025",
+      "images": [
+      ]
+    }
+  ]
+}
